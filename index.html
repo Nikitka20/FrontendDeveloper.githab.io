@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Никита Косцов — Frontend Developer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- MODAL WINDOW  -->
+    <div class="contact-modal" id="contactModal">
+        <div class="contact-modal__overlay" id="contactOverlay"></div>
+        <div class="contact-modal__box">
+            <button class="contact-modal__close" id="contactClose">&times;</button>
+            <h2 class="contact-modal__title">Написать мне</h2>
+            <p class="contact-modal__subtitle">Отвечу в течение нескольких часов</p>
+            <form class="contact-modal__form" id="contactForm">
+                <div class="contact-modal__group">
+                    <label>Имя</label>
+                    <input type="text" placeholder="Ваше имя" required />
+                </div>
+                <div class="contact-modal__group">
+                    <label>Контакт (email или телефон)</label>
+                    <input type="text" placeholder="example@mail.ru или +7..." required />
+                </div>
+                <div class="contact-modal__group">
+                    <label>Сообщение</label>
+                    <textarea placeholder="Расскажите о задаче..." required></textarea>
+                </div>
+                <button type="submit" class="contact-modal__submit">Отправить</button>
+                <div class="contact-modal__success" id="formSuccess">
+                    ✓ Сообщение отправлено! Свяжусь с вами в ближайшее время.
+                </div>
+            </form>
+            <div class="contact-modal__socials">
+                <span>Или напишите напрямую:</span>
+                <div class="icons">
+                    <a href="#!" aria-label="Telegram"><img class="tg" src="./img/svg/tg.svg" alt="Telegram"></a>
+                    <a href="#!" aria-label="WhatsApp"><img class="wpp" src="./img/svg/wpp.svg" alt="WhatsApp"></a>
+                    <a href="#!" aria-label="VK"><img class="vk" src="./img/svg/vk.svg" alt="VK"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- HEADER -->
+    <section class="header" id="header">
+        <div class="container header__container">
+            <div class="nav nav--default">
+                <ul>
+                    <li><a href="#main">Главная</a></li>
+                    <li><a href="#about-me">Обо мне</a></li>
+                    <li><a href="#skills">Навыки</a></li>
+                    <li><a href="#works">Мои работы</a></li>
+                </ul>
+            </div>
+            <div class="header__btn-plus-images">
+                <button class="header__btn" id="openContactBtn">Написать</button>
+                <div class="icons">
+                    <a href="#!" aria-label="Telegram"><img class="tg" src="./img/svg/tg.svg" alt="Telegram"></a>
+                    <a href="#!" aria-label="WhatsApp"><img class="wpp" src="./img/svg/wpp.svg" alt="WhatsApp"></a>
+                    <a href="#!" aria-label="VK"><img class="vk" src="./img/svg/vk.svg" alt="VK"></a>
+                </div>
+            </div>
+            <button class="burger" aria-label="Меню">
+                <div class="burger-line"></div>
+            </button>
+        </div>
+    </section>
+
+    <!-- MAIN CONTENT -->
+    <main class="main" id="main">
+
+        <!-- HELLO SECTION -->
+        <section class="hello-section" id="hello">
+            <div class="container hello-section__container">
+                <div class="hello-section__bg-animation">
+                    <div class="bg-circle bg-circle-1"></div>
+                    <div class="bg-circle bg-circle-2"></div>
+                    <div class="bg-circle bg-circle-3"></div>
+                </div>
+                <div class="hello-section__content">
+                    <div class="hello-section__text-wrapper">
+                        <div class="hello-section__badge">
+                            <span class="badge-text">Frontend Developer</span>
+                            <span class="badge-dot"></span>
+                        </div>
+                        <h1 class="hello-section__title">
+                            <span class="title-greeting">Привет!</span>
+                            <span class="title-name">Меня зовут <span class="name-highlight">Никита</span></span>
+                            <span class="title-role">я <span class="role-highlight">фронтенд разработчик</span></span>
+                        </h1>
+                        <p class="hello-section__desc">
+                            Создаю <span class="desc-highlight">современные</span>,
+                            <span class="desc-highlight">быстрые</span> и
+                            <span class="desc-highlight">адаптивные</span> сайты.<br>
+                            Помогаю бизнесу расти через удобные интерфейсы.
+                        </p>
+                        <div class="hello-section__stats">
+                            <div class="stat-item">
+                                <span class="stat-number">6+</span>
+                                <span class="stat-label">месяцев опыта</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">10+</span>
+                                <span class="stat-label">проектов</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">100%</span>
+                                <span class="stat-label">довольных клиентов</span>
+                            </div>
+                        </div>
+                        <div class="hello-section__actions">
+                            <a href="#works" class="btn btn-primary">
+                                <span>Смотреть работы</span>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                    <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </a>
+                            <button class="btn btn-outline" id="openContactBtnHero">
+                                <span>Написать мне</span>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                    <path d="M22 2L11 13M22 2L15 22L11 13M22 2L2 9L11 13" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="hello-section__visual">
+                        <div class="visual-card">
+                            <div class="visual-portrait">
+                                <div class="portrait-frame">
+                                    <div class="portrait-image"></div>
+                                    <div class="portrait-glow"></div>
+                                </div>
+                            </div>
+                            <div class="floating-elements">
+                                <div class="float-item float-1">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path d="M12 2L15 8H9L12 2Z" fill="#8C0007" />
+                                        <rect x="10" y="8" width="4" height="12" fill="#8C0007" />
+                                    </svg>
+                                    <span>HTML5</span>
+                                </div>
+                                <div class="float-item float-2">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path d="M12 2L2 7L12 12L22 7L12 2Z" fill="#8C0007" />
+                                        <path d="M2 17L12 22L22 17" stroke="#8C0007" stroke-width="2" fill="none" />
+                                        <path d="M2 12L12 17L22 12" stroke="#8C0007" stroke-width="2" fill="none" />
+                                    </svg>
+                                    <span>CSS3</span>
+                                </div>
+                                <div class="float-item float-3">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path d="M12 2V22M12 2L8 6M12 2L16 6M12 22L8 18M12 22L16 18" stroke="#8C0007"
+                                            stroke-width="2" />
+                                        <circle cx="12" cy="12" r="4" fill="#8C0007" />
+                                    </svg>
+                                    <span>JS</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hello-section__decor decor-1"></div>
+                <div class="hello-section__decor decor-2"></div>
+                <div class="hello-section__decor decor-3"></div>
+            </div>
+        </section>
+
+        <!-- SKILLS SECTION -->
+        <section class="skills" id="skills">
+            <div class="container skills__container">
+                <div class="skills__bg-animation">
+                    <div class="skills-bg-circle skills-bg-circle-1"></div>
+                    <div class="skills-bg-circle skills-bg-circle-2"></div>
+                    <div class="skills-bg-circle skills-bg-circle-3"></div>
+                </div>
+                <div class="skills__header">
+                    <div class="skills__badge">
+                        <span class="skills-badge-text">Мой стек технологий</span>
+                        <span class="skills-badge-dot"></span>
+                    </div>
+                    <h2 class="skills__title">Профессиональные <span class="title-highlight">навыки</span></h2>
+                    <p class="skills__subtitle">Инструменты и технологии, которые я использую для создания современных
+                        веб-проектов</p>
+                </div>
+                <div class="skills__grid">
+                    <div class="skill-card">
+                        <div class="skill-card__icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
+                                <path d="M12 2L15 8H9L12 2Z" fill="#8C0007" />
+                                <rect x="10" y="8" width="4" height="12" fill="#8C0007" />
+                                <path d="M4 20H20" stroke="#8C0007" stroke-width="2" />
+                            </svg>
+                        </div>
+                        <h3 class="skill-card__title">Вёрстка</h3>
+                        <div class="skill-card__tags">
+                            <span class="skill-tag">HTML5</span>
+                            <span class="skill-tag">CSS3</span>
+                            <span class="skill-tag">SCSS</span>
+                            <span class="skill-tag">FLEXBOX</span>
+                            <span class="skill-tag">GRID</span>
+                            <span class="skill-tag">БЭМ</span>
+                        </div>
+                        <div class="skill-card__progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 95%"></div>
+                            </div>
+                            <span class="progress-percent">95%</span>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-card__icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
+                                <path d="M4 4H20V16H4V4Z" stroke="#8C0007" stroke-width="2" fill="none" />
+                                <path d="M8 20H16M12 16V20" stroke="#8C0007" stroke-width="2" />
+                                <path d="M20 12H4" stroke="#8C0007" stroke-width="2" />
+                            </svg>
+                        </div>
+                        <h3 class="skill-card__title">Адаптивность</h3>
+                        <div class="skill-card__tags">
+                            <span class="skill-tag">Media Queries</span>
+                            <span class="skill-tag">Mobile First</span>
+                            <span class="skill-tag">Desktop First</span>
+                            <span class="skill-tag">Responsive Design</span>
+                        </div>
+                        <div class="skill-card__progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 90%"></div>
+                            </div>
+                            <span class="progress-percent">90%</span>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-card__icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
+                                <path d="M12 2V22M12 2L8 6M12 2L16 6M12 22L8 18M12 22L16 18" stroke="#8C0007"
+                                    stroke-width="2" />
+                                <circle cx="12" cy="12" r="4" fill="#8C0007" />
+                            </svg>
+                        </div>
+                        <h3 class="skill-card__title">JavaScript</h3>
+                        <div class="skill-card__tags">
+                            <span class="skill-tag">ES6+</span>
+                            <span class="skill-tag">DOM API</span>
+                            <span class="skill-tag">Fetch API</span>
+                            <span class="skill-tag">Async/Await</span>
+                        </div>
+                        <div class="skill-card__progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 85%"></div>
+                            </div>
+                            <span class="progress-percent">85%</span>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-card__icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
+                                <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12"
+                                    stroke="#8C0007" stroke-width="2" fill="none" />
+                                <path d="M12 8L8 12L12 16L16 12L12 8Z" fill="#8C0007" />
+                                <circle cx="12" cy="12" r="2" fill="white" />
+                            </svg>
+                        </div>
+                        <h3 class="skill-card__title">Инструменты дизайна</h3>
+                        <div class="skill-card__tags">
+                            <span class="skill-tag">Figma</span>
+                            <span class="skill-tag">Photoshop</span>
+                            <span class="skill-tag">Pixel Perfect</span>
+                        </div>
+                        <div class="skill-card__progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 80%"></div>
+                            </div>
+                            <span class="progress-percent">80%</span>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-card__icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
+                                <path d="M4 7L12 12L20 7L12 2L4 7Z" stroke="#8C0007" stroke-width="2" fill="none" />
+                                <path d="M4 12L12 17L20 12" stroke="#8C0007" stroke-width="2" fill="none" />
+                                <path d="M4 17L12 22L20 17" stroke="#8C0007" stroke-width="2" fill="none" />
+                            </svg>
+                        </div>
+                        <h3 class="skill-card__title">Хранение данных</h3>
+                        <div class="skill-card__tags">
+                            <span class="skill-tag">LocalStorage</span>
+                            <span class="skill-tag">SessionStorage</span>
+                            <span class="skill-tag">JSON</span>
+                        </div>
+                        <div class="skill-card__progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 75%"></div>
+                            </div>
+                            <span class="progress-percent">75%</span>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-card__icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
+                                <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22" stroke="#8C0007"
+                                    stroke-width="2" fill="none" />
+                                <path d="M12 6L16 12L12 18L8 12L12 6Z" fill="#8C0007" />
+                                <circle cx="12" cy="12" r="2" fill="white" />
+                            </svg>
+                        </div>
+                        <h3 class="skill-card__title">CMS</h3>
+                        <div class="skill-card__tags">
+                            <span class="skill-tag">WordPress</span>
+                        </div>
+                        <div class="skill-card__progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 70%"></div>
+                            </div>
+                            <span class="progress-percent">70%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skills__additional">
+                    <div class="additional-header">
+                        <span class="additional-icon">○</span>
+                        <h3 class="additional-title">Дополнительные компетенции</h3>
+                    </div>
+                    <div class="additional-tags">
+                        <span class="additional-tag">Git & GitHub</span>
+                        <span class="additional-tag">Cross-browser</span>
+                        <span class="additional-tag">SEO базовые</span>
+                        <span class="additional-tag">Анимации & Transition</span>
+                        <span class="additional-tag">Отладка (DevTools)</span>
+                    </div>
+                </div>
+                <div class="skills__decor decor-skill-1"></div>
+                <div class="skills__decor decor-skill-2"></div>
+                <div class="skills__decor decor-skill-3"></div>
+            </div>
+        </section>
+
+        <!-- WORKS SECTION -->
+        <section class="works" id="works">
+            <div class="container works__container">
+                <div class="works__bg-animation">
+                    <div class="works-bg-circle works-bg-circle-1"></div>
+                    <div class="works-bg-circle works-bg-circle-2"></div>
+                    <div class="works-bg-circle works-bg-circle-3"></div>
+                </div>
+                <div class="works__header">
+                    <div class="works__badge">
+                        <span class="works-badge-text">Мое портфолио</span>
+                        <span class="works-badge-dot"></span>
+                    </div>
+                    <h2 class="works__title">Последние <span class="title-highlight">проекты</span></h2>
+                    <p class="works__subtitle">Каждый проект — это уникальная задача, которую я решаю с помощью
+                        современных технологий</p>
+                </div>
+                <div class="works__filters">
+                    <button class="filter-btn active" data-filter="all">Все проекты</button>
+                    <button class="filter-btn" data-filter="web">Web-сайты</button>
+                    <button class="filter-btn" data-filter="landing">Лендинги</button>
+                    <button class="filter-btn" data-filter="app">Приложения</button>
+                </div>
+                <div class="works__grid">
+                    <div class="work-card" data-category="web">
+                        <div class="work-card__image">
+                            <img src="./img/127.0.0.1_5501_index.html (3) 1.png" alt="WebFilms проект">
+                            <div class="work-card__overlay">
+                                <button class="work-card__preview" data-project="1">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path d="M1 12C1 12 5 4 12 4C19 4 23 12 23 12C23 12 19 20 12 20C5 20 1 12 1 12Z"
+                                            stroke="white" stroke-width="2" />
+                                        <circle cx="12" cy="12" r="3" stroke="white" stroke-width="2" />
+                                    </svg>
+                                </button>
+                                <a href="#" class="work-card__link" aria-label="Ссылка на проект">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path
+                                            d="M18 13V19C18 19.5304 17.7893 20.0391 17.4142 20.4142C17.0391 20.7893 16.5304 21 16 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V8C3 7.46957 3.21071 6.96086 3.58579 6.58579C3.96086 6.21071 4.46957 6 5 6H11M15 3H21M21 3V9M21 3L10 14"
+                                            stroke="white" stroke-width="2" stroke-linecap="round" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="work-card__content">
+                            <div class="work-card__category">Web-сайт</div>
+                            <h3 class="work-card__title">WebFilms</h3>
+                            <p class="work-card__desc">Современный сайт с кинотекой и возможностью фильтрации</p>
+                            <div class="work-card__tech">
+                                <span class="work-tech">HTML5</span>
+                                <span class="work-tech">CSS3</span>
+                                <span class="work-tech">JavaScript</span>
+                                <span class="work-tech">API</span>
+                            </div>
+                            <div class="work-card__actions">
+                                <a href="#" class="work-card__btn">Смотреть проект →</a>
+                                <a href="#" class="work-card__github" aria-label="GitHub">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                        <path
+                                            d="M12 2C6.48 2 2 6.48 2 12C2 16.41 5.07 20.08 9.23 21.31C9.73 21.41 9.92 21.1 9.92 20.82C9.92 20.56 9.91 19.87 9.91 19.15C7.73 19.59 7.14 18.21 7.14 18.21C6.69 17.12 6.04 16.89 6.04 16.89C5.14 16.44 6.11 16.45 6.11 16.45C7.1 16.52 7.62 17.46 7.62 17.46C8.5 19.01 9.97 18.69 10.01 18.42C10.11 17.78 10.38 17.34 10.67 17.08C8.42 16.84 6.08 15.96 6.08 11.93C6.08 10.78 6.48 9.85 7.14 9.12C7.03 8.87 6.67 7.81 7.24 6.36C7.24 6.36 8.09 6.09 9.93 7.46C10.74 7.24 11.6 7.13 12.46 7.13C13.32 7.13 14.18 7.24 14.99 7.46C16.83 6.09 17.68 6.36 17.68 6.36C18.25 7.81 17.89 8.87 17.78 9.12C18.44 9.85 18.84 10.78 18.84 11.93C18.84 15.97 16.5 16.83 14.23 17.07C14.6 17.39 14.92 18.01 14.92 18.96C14.92 20.31 14.91 21.41 14.91 20.82C14.91 21.1 15.1 21.42 15.61 21.31C19.77 20.07 22.83 16.41 22.83 12C22.83 6.48 18.35 2 12 2Z"
+                                            fill="white" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="work-card" data-category="web">
+                        <div class="work-card__image work-card__image--empty">
+                            <div class="empty-placeholder">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
+                                    <path d="M3 3V21H21" stroke="#8C0007" stroke-width="2" />
+                                    <path d="M7 15L10 10L13 13L19 5" stroke="#8C0007" stroke-width="2"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </div>
+                            <div class="work-card__overlay">
+                                <button class="work-card__preview" data-project="2">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path d="M1 12C1 12 5 4 12 4C19 4 23 12 23 12C23 12 19 20 12 20C5 20 1 12 1 12Z"
+                                            stroke="white" stroke-width="2" />
+                                        <circle cx="12" cy="12" r="3" stroke="white" stroke-width="2" />
+                                    </svg>
+                                </button>
+                                <a href="#" class="work-card__link" aria-label="Ссылка на проект">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path
+                                            d="M18 13V19C18 19.5304 17.7893 20.0391 17.4142 20.4142C17.0391 20.7893 16.5304 21 16 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V8C3 7.46957 3.21071 6.96086 3.58579 6.58579C3.96086 6.21071 4.46957 6 5 6H11M15 3H21M21 3V9M21 3L10 14"
+                                            stroke="white" stroke-width="2" stroke-linecap="round" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="work-card__content">
+                            <div class="work-card__category">Web-приложение</div>
+                            <h3 class="work-card__title">Analytics Dashboard</h3>
+                            <p class="work-card__desc">Панель аналитики с графиками и интерактивными отчётами</p>
+                            <div class="work-card__tech">
+                                <span class="work-tech">Chart.js</span>
+                                <span class="work-tech">Grid</span>
+                                <span class="work-tech">Flexbox</span>
+                                <span class="work-tech">API</span>
+                            </div>
+                            <div class="work-card__actions">
+                                <a href="#" class="work-card__btn">Смотреть проект →</a>
+                                <a href="#" class="work-card__github" aria-label="GitHub">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                        <path
+                                            d="M12 2C6.48 2 2 6.48 2 12C2 16.41 5.07 20.08 9.23 21.31C9.73 21.41 9.92 21.1 9.92 20.82C9.92 20.56 9.91 19.87 9.91 19.15C7.73 19.59 7.14 18.21 7.14 18.21C6.69 17.12 6.04 16.89 6.04 16.89C5.14 16.44 6.11 16.45 6.11 16.45C7.1 16.52 7.62 17.46 7.62 17.46C8.5 19.01 9.97 18.69 10.01 18.42C10.11 17.78 10.38 17.34 10.67 17.08C8.42 16.84 6.08 15.96 6.08 11.93C6.08 10.78 6.48 9.85 7.14 9.12C7.03 8.87 6.67 7.81 7.24 6.36C7.24 6.36 8.09 6.09 9.93 7.46C10.74 7.24 11.6 7.13 12.46 7.13C13.32 7.13 14.18 7.24 14.99 7.46C16.83 6.09 17.68 6.36 17.68 6.36C18.25 7.81 17.89 8.87 17.78 9.12C18.44 9.85 18.84 10.78 18.84 11.93C18.84 15.97 16.5 16.83 14.23 17.07C14.6 17.39 14.92 18.01 14.92 18.96C14.92 20.31 14.91 21.41 14.91 20.82C14.91 21.1 15.1 21.42 15.61 21.31C19.77 20.07 22.83 16.41 22.83 12C22.83 6.48 18.35 2 12 2Z"
+                                            fill="white" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="work-card" data-category="landing">
+                        <div class="work-card__image work-card__image--empty">
+                            <div class="empty-placeholder">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
+                                    <path d="M12 2L15 8H9L12 2Z" fill="#8C0007" />
+                                    <rect x="10" y="8" width="4" height="12" fill="#8C0007" />
+                                </svg>
+                            </div>
+                            <div class="work-card__overlay">
+                                <button class="work-card__preview" data-project="3">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path d="M1 12C1 12 5 4 12 4C19 4 23 12 23 12C23 12 19 20 12 20C5 20 1 12 1 12Z"
+                                            stroke="white" stroke-width="2" />
+                                        <circle cx="12" cy="12" r="3" stroke="white" stroke-width="2" />
+                                    </svg>
+                                </button>
+                                <a href="#" class="work-card__link" aria-label="Ссылка на проект">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path
+                                            d="M18 13V19C18 19.5304 17.7893 20.0391 17.4142 20.4142C17.0391 20.7893 16.5304 21 16 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V8C3 7.46957 3.21071 6.96086 3.58579 6.58579C3.96086 6.21071 4.46957 6 5 6H11M15 3H21M21 3V9M21 3L10 14"
+                                            stroke="white" stroke-width="2" stroke-linecap="round" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="work-card__content">
+                            <div class="work-card__category">Лендинг</div>
+                            <h3 class="work-card__title">Creative Landing</h3>
+                            <p class="work-card__desc">Адаптивный лендинг с анимациями и параллакс-эффектом</p>
+                            <div class="work-card__tech">
+                                <span class="work-tech">HTML5</span>
+                                <span class="work-tech">CSS3</span>
+                                <span class="work-tech">JavaScript</span>
+                                <span class="work-tech">GSAP</span>
+                            </div>
+                            <div class="work-card__actions">
+                                <a href="#" class="work-card__btn">Смотреть проект →</a>
+                                <a href="#" class="work-card__github" aria-label="GitHub">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                        <path
+                                            d="M12 2C6.48 2 2 6.48 2 12C2 16.41 5.07 20.08 9.23 21.31C9.73 21.41 9.92 21.1 9.92 20.82C9.92 20.56 9.91 19.87 9.91 19.15C7.73 19.59 7.14 18.21 7.14 18.21C6.69 17.12 6.04 16.89 6.04 16.89C5.14 16.44 6.11 16.45 6.11 16.45C7.1 16.52 7.62 17.46 7.62 17.46C8.5 19.01 9.97 18.69 10.01 18.42C10.11 17.78 10.38 17.34 10.67 17.08C8.42 16.84 6.08 15.96 6.08 11.93C6.08 10.78 6.48 9.85 7.14 9.12C7.03 8.87 6.67 7.81 7.24 6.36C7.24 6.36 8.09 6.09 9.93 7.46C10.74 7.24 11.6 7.13 12.46 7.13C13.32 7.13 14.18 7.24 14.99 7.46C16.83 6.09 17.68 6.36 17.68 6.36C18.25 7.81 17.89 8.87 17.78 9.12C18.44 9.85 18.84 10.78 18.84 11.93C18.84 15.97 16.5 16.83 14.23 17.07C14.6 17.39 14.92 18.01 14.92 18.96C14.92 20.31 14.91 21.41 14.91 20.82C14.91 21.1 15.1 21.42 15.61 21.31C19.77 20.07 22.83 16.41 22.83 12C22.83 6.48 18.35 2 12 2Z"
+                                            fill="white" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="work-card" data-category="app">
+                        <div class="work-card__image work-card__image--empty">
+                            <div class="empty-placeholder">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
+                                    <rect x="5" y="2" width="14" height="20" rx="2" stroke="#8C0007" stroke-width="2" />
+                                    <path d="M12 18H12.01" stroke="#8C0007" stroke-width="2" stroke-linecap="round" />
+                                </svg>
+                            </div>
+                            <div class="work-card__overlay">
+                                <button class="work-card__preview" data-project="4">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path d="M1 12C1 12 5 4 12 4C19 4 23 12 23 12C23 12 19 20 12 20C5 20 1 12 1 12Z"
+                                            stroke="white" stroke-width="2" />
+                                        <circle cx="12" cy="12" r="3" stroke="white" stroke-width="2" />
+                                    </svg>
+                                </button>
+                                <a href="#" class="work-card__link" aria-label="Ссылка на проект">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path
+                                            d="M18 13V19C18 19.5304 17.7893 20.0391 17.4142 20.4142C17.0391 20.7893 16.5304 21 16 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V8C3 7.46957 3.21071 6.96086 3.58579 6.58579C3.96086 6.21071 4.46957 6 5 6H11M15 3H21M21 3V9M21 3L10 14"
+                                            stroke="white" stroke-width="2" stroke-linecap="round" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="work-card__content">
+                            <div class="work-card__category">Мобильное приложение</div>
+                            <h3 class="work-card__title">Mobile App Design</h3>
+                            <p class="work-card__desc">Кроссплатформенное приложение с современным UI/UX</p>
+                            <div class="work-card__tech">
+                                <span class="work-tech">Figma</span>
+                                <span class="work-tech">React Native</span>
+                                <span class="work-tech">Redux</span>
+                            </div>
+                            <div class="work-card__actions">
+                                <a href="#" class="work-card__btn">Смотреть проект →</a>
+                                <a href="#" class="work-card__github" aria-label="GitHub">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                        <path
+                                            d="M12 2C6.48 2 2 6.48 2 12C2 16.41 5.07 20.08 9.23 21.31C9.73 21.41 9.92 21.1 9.92 20.82C9.92 20.56 9.91 19.87 9.91 19.15C7.73 19.59 7.14 18.21 7.14 18.21C6.69 17.12 6.04 16.89 6.04 16.89C5.14 16.44 6.11 16.45 6.11 16.45C7.1 16.52 7.62 17.46 7.62 17.46C8.5 19.01 9.97 18.69 10.01 18.42C10.11 17.78 10.38 17.34 10.67 17.08C8.42 16.84 6.08 15.96 6.08 11.93C6.08 10.78 6.48 9.85 7.14 9.12C7.03 8.87 6.67 7.81 7.24 6.36C7.24 6.36 8.09 6.09 9.93 7.46C10.74 7.24 11.6 7.13 12.46 7.13C13.32 7.13 14.18 7.24 14.99 7.46C16.83 6.09 17.68 6.36 17.68 6.36C18.25 7.81 17.89 8.87 17.78 9.12C18.44 9.85 18.84 10.78 18.84 11.93C18.84 15.97 16.5 16.83 14.23 17.07C14.6 17.39 14.92 18.01 14.92 18.96C14.92 20.31 14.91 21.41 14.91 20.82C14.91 21.1 15.1 21.42 15.61 21.31C19.77 20.07 22.83 16.41 22.83 12C22.83 6.48 18.35 2 12 2Z"
+                                            fill="white" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="works__more">
+                    <button class="btn-more">
+                        <span>Показать еще проекты</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 5V19M12 19L5 12M12 19L19 12" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="works__decor decor-work-1"></div>
+                <div class="works__decor decor-work-2"></div>
+                <div class="works__decor decor-work-3"></div>
+            </div>
+        </section>
+
+        <!-- ABOUT ME SECTION -->
+        <section class="about-me" id="about-me">
+            <div class="container about-me__container">
+                <div class="about-me__bg-animation">
+                    <div class="about-bg-circle about-bg-circle-1"></div>
+                    <div class="about-bg-circle about-bg-circle-2"></div>
+                    <div class="about-bg-circle about-bg-circle-3"></div>
+                </div>
+
+                <div class="about-me__left">
+                    <div class="about-me__photo-card">
+                        <div class="about-me__photo-wrap">
+                            <img src="./img/protret/portret_2.jpg" alt="Никита Косцов" class="about-me__photo">
+                            <div class="about-me__photo-overlay">
+                                <h3 class="about-me__name">Никита Косцов</h3>
+                                <p class="about-me__role">Frontend Developer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-me__right">
+                    <div class="about-me__badge">
+                        <span class="about-badge-text">Кто я</span>
+                        <span class="about-badge-dot"></span>
+                    </div>
+                    <h2 class="about-me__title">Немного <span class="title-highlight">о себе</span></h2>
+                    <p class="about-me__lead">
+                        Привет! Я — Никита. Последние полгода создаю сайты и уже понял: это именно то, чему хочу
+                        посвящать время и расти профессионально.
+                    </p>
+
+                    <div class="about-me__cards">
+                        <div class="about-card">
+                            <img class="about-card__icon" src="./img/svg/storm.svg" alt="Старт">
+                            <h3 class="about-card__title">Старт</h3>
+                            <p class="about-card__text">Начинал с основ: HTML, CSS, JavaScript. Прошёл профильный курс,
+                                освоил WordPress — и быстро вышел на первые заказы.</p>
+                        </div>
+                        <div class="about-card">
+                            <img class="about-card__icon about-card__icon--two" src="./img/svg/learn.svg" alt="Образование">
+                            <h3 class="about-card__title">Образование</h3>
+                            <p class="about-card__text">Первокурсник МГТУ им. Баумана. Учёба даёт системное мышление и
+                                дисциплину — то, что критично в разработке.</p>
+                        </div>
+                        <div class="about-card">
+                            <img class="about-card__icon" src="./img/svg/rocket.svg" alt="Сейчас">
+                            <h3 class="about-card__title">Сейчас</h3>
+                            <p class="about-card__text">Углубляюсь во фронтенд, пишу проекты для портфолио, беру заказы
+                                — набираюсь опыта в живой работе.</p>
+                        </div>
+                    </div>
+
+                    <div class="about-me__quote">
+                        <p class="quote-text">«Когда из макета или идеи получается готовый, работающий сайт — это и есть
+                            лучшая мотивация продолжать.»</p>
+                        <p class="quote-author">@Никита Косцов</p>
+                    </div>
+                </div>
+
+                <div class="about-me__decor decor-about-1"></div>
+                <div class="about-me__decor decor-about-2"></div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer__bg-animation">
+            <div class="footer-bg-circle footer-bg-circle-1"></div>
+            <div class="footer-bg-circle footer-bg-circle-2"></div>
+        </div>
+        <div class="container footer__container">
+            <div class="footer__content">
+                <div class="footer__brand">
+                    <a href="#header" class="footer__logo">Никита <span>Косцов</span></a>
+                    <p class="footer__tagline">Создаю современные, быстрые и адаптивные сайты. Помогаю бизнесу расти
+                        через удобные интерфейсы.</p>
+                    <div class="footer__social">
+                        <a href="#!" class="footer__social-link" aria-label="Telegram">
+                            <img src="./img/svg/tg-2.svg" alt="Telegram">
+                        </a>
+                        <a href="#!" class="footer__social-link" aria-label="WhatsApp">
+                            <img src="./img/svg/wpp-2.svg" alt="WhatsApp">
+                        </a>
+                        <a href="#!" class="footer__social-link" aria-label="VK">
+                            <img src="./img/svg/vk-2.svg" alt="VK">
+                        </a>
+                        <a href="#!" class="footer__social-link" aria-label="GitHub">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                <path
+                                    d="M12 2C6.48 2 2 6.48 2 12C2 16.41 5.07 20.08 9.23 21.31C9.73 21.41 9.92 21.1 9.92 20.82C9.92 20.56 9.91 19.87 9.91 19.15C7.73 19.59 7.14 18.21 7.14 18.21C6.69 17.12 6.04 16.89 6.04 16.89C5.14 16.44 6.11 16.45 6.11 16.45C7.1 16.52 7.62 17.46 7.62 17.46C8.5 19.01 9.97 18.69 10.01 18.42C10.11 17.78 10.38 17.34 10.67 17.08C8.42 16.84 6.08 15.96 6.08 11.93C6.08 10.78 6.48 9.85 7.14 9.12C7.03 8.87 6.67 7.81 7.24 6.36C7.24 6.36 8.09 6.09 9.93 7.46C10.74 7.24 11.6 7.13 12.46 7.13C13.32 7.13 14.18 7.24 14.99 7.46C16.83 6.09 17.68 6.36 17.68 6.36C18.25 7.81 17.89 8.87 17.78 9.12C18.44 9.85 18.84 10.78 18.84 11.93C18.84 15.97 16.5 16.83 14.23 17.07C14.6 17.39 14.92 18.01 14.92 18.96C14.92 20.31 14.91 21.41 14.91 20.82C14.91 21.1 15.1 21.42 15.61 21.31C19.77 20.07 22.83 16.41 22.83 12C22.83 6.48 18.35 2 12 2Z"
+                                    fill="#E6E1DE" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer__column">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="#main">Главная</a></li>
+                        <li><a href="#about-me">Обо мне</a></li>
+                        <li><a href="#skills">Навыки</a></li>
+                        <li><a href="#works">Мои работы</a></li>
+                    </ul>
+                </div>
+                <div class="footer__column">
+                    <h4>Контакты</h4>
+                    <div class="footer__contact-item">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                            <path
+                                d="M22 6L12 13L2 6M22 6L12 13L2 6M2 6V18C2 18.5304 2.21071 19.0391 2.58579 19.4142C2.96086 19.7893 3.46957 20 4 20H20C20.5304 20 21.0391 19.7893 21.4142 19.4142C21.7893 19.0391 22 18.5304 22 18V6M2 6L12 13L22 6"
+                                stroke="#E6E1DE" stroke-width="2" />
+                        </svg>
+                        <a href="mailto:kosnik7975@gmail.com">kosnik7975@gmail.com</a>
+                    </div>
+                    <div class="footer__contact-item">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                            <path
+                                d="M22 16.92V19C22.0001 19.5304 21.7894 20.0391 21.4143 20.4142C21.0392 20.7893 20.5305 21 20 21H4C3.46957 21 2.96086 20.7893 2.58579 20.4142C2.21071 20.0391 2 19.5304 2 19V16.92M12 12L22 6.5M2 6.5L12 12M22 6.5V17C22 17.5304 21.7893 18.0391 21.4142 18.4142C21.0391 18.7893 20.5304 19 20 19H4C3.46957 19 2.96086 18.7893 2.58579 18.4142C2.21071 18.0391 2 17.5304 2 17V6.5M22 6.5L12 2L2 6.5"
+                                stroke="#E6E1DE" stroke-width="2" />
+                        </svg>
+                        <span>Россия, Москва</span>
+                    </div>
+                </div>
+                <div class="footer__column">
+                    <h4>Режим работы</h4>
+                    <div class="footer__contact-item">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                            <circle cx="12" cy="12" r="10" stroke="#E6E1DE" stroke-width="2" />
+                            <path d="M12 6V12L16 14" stroke="#E6E1DE" stroke-width="2" />
+                        </svg>
+                        <span>Пн-Пт: 9:00 - 20:00</span>
+                    </div>
+                    <div class="footer__contact-item">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                            <circle cx="12" cy="12" r="10" stroke="#E6E1DE" stroke-width="2" />
+                            <path d="M12 8V12L14 14" stroke="#E6E1DE" stroke-width="2" />
+                        </svg>
+                        <span>Сб-Вс: по договоренности</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <div class="footer__copyright">
+                    <span>@2026 Косцов Никита</span> Все права защищены.
+                </div>
+                <a href="#main" class="footer__back-to-top">
+                    <span>Вернуться наверх</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                        <path d="M12 19V5M12 5L5 12M12 5L19 12" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- BURGER MENU -->
+    <div class="burger-overlay" id="burgerOverlay"></div>
+    <div class="burger-desc" id="burgerMenu">
+        <button class="cross" id="burgerClose">&times;</button>
+        <div class="nav nav--burger-desc">
+            <ul>
+                <li><a href="#header" class="burger-link">Главная</a></li>
+                <li><a href="#about-me" class="burger-link">Обо мне</a></li>
+                <li><a href="#skills" class="burger-link">Навыки</a></li>
+                <li><a href="#works" class="burger-link">Мои работы</a></li>
+            </ul>
+        </div>
+        <div class="burger-desc__footer">
+            <button class="header__btn" id="openContactBtnBurger">Написать</button>
+            <div class="icons">
+                <a href="#!" aria-label="Telegram"><img class="tg" src="./img/svg/tg.svg" alt="Telegram"></a>
+                <a href="#!" aria-label="WhatsApp"><img class="wpp" src="./img/svg/wpp.svg" alt="WhatsApp"></a>
+                <a href="#!" aria-label="VK"><img class="vk" src="./img/svg/vk.svg" alt="VK"></a>
+            </div>
+        </div>
+    </div>
+
+    <script src="./javaScript.js"></script>
+</body>
+
+</html>
